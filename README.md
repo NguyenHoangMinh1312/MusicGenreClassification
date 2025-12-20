@@ -87,3 +87,9 @@ The model defined in `model.py` likely follows this flow:
 You can view the result (including loss graph, confusion matrix, ...) using **Tensorboard**
 
 ``tensorboard --logdir=<your tensorboard folder>``
+
+You can get the model checkpoints here
+
+`https://drive.google.com/drive/folders/10immdRoflqZELBn1LTnoX2kxqMIJcY8b?usp=sharing`
+
+Note: *best.pt* is used for inferencing, while *last.pt* is used for continual training

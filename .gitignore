@@ -1,0 +1,5 @@
+tensorboard/
+datasets/
+music_by_genre/
+__pycache__/
+checkpoints/

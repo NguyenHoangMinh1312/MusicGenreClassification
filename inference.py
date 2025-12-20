@@ -19,13 +19,7 @@ def preprocessAudio(audio_path: str,
   
   # 2. Resize
   spectrogram_image = cv2.resize(spectrogram_image, (448, 448))
-  cv2.imshow("Spectrogram", spectrogram_image)
-  cv2.waitKey(0)
-  cv2.destroyAllWindows()
   
-  # REMOVED: cv2.cvtColor(..., cv2.COLOR_BGR2RGB) 
-  # Reason: melSpectrogramCompute already returns RGB. Converting again would swap channels to BGR.
-
   # 3. Convert to Tensor and Normalize
   spectrogram_tensor = torch.tensor(spectrogram_image, dtype=torch.float32)
   spectrogram_tensor = spectrogram_tensor.permute(2, 0, 1) / 255.0
